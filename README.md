@@ -1,4 +1,4 @@
-# Russia-Car-Driving-Krasnodar-Script-
+# Russia-Car-Driving-Krasnodar-Script
 Basic Auto Farm Script For RCDK (12640241039)
 
 ```lua
