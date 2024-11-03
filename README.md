@@ -28,3 +28,5 @@ How To Use:
 
 Script is Open Source, so You Can Modify Whatever You Want
 P.S i took anti-afk script somewhere from the internet
+
+getsolara.dev or discord.gg/getxeno
