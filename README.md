@@ -20,6 +20,36 @@ end)
 
 local vu = game:GetService("VirtualUser")game:GetService("Players").LocalPlayer.Idled:connect(function() vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame) wait(1) vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)end) 
 ```
+--2000 Robux contest
+```lua
+local stops = game.Workspace.TaxiWorkspace
+local lpr = game.Players.LocalPlayer.Character
+local take_route = game:GetService("ReplicatedStorage").Taxi.Taxi
+local mycar = game.Workspace.Cars[lpr.Name..'sCar'].DriveSeat.Promt.ProximityPrompt
+local idk = game.Workspace.Cars[lpr.Name..'sCar'].PressF
+
+task.spawn(function()
+    mycar.HoldDuration = 0
+    while task.wait(0.5) do
+        for _,v in pairs(stops:GetChildren()) do
+            take_route:FireServer("Start", 1)
+            v.Stop.CFrame = lpr.HumanoidRootPart.CFrame
+        end
+    end
+end)
+
+task.spawn(function()
+    while task.wait(0.5) do
+        wait(1.3)
+        idk:FireServer()
+        wait(1.3)
+        fireproximityprompt(mycar)
+    end
+end)
+
+
+local vu = game:GetService("VirtualUser")game:GetService("Players").LocalPlayer.Idled:connect(function() vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame) wait(1) vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)end) 
+```
 
 How To Use:
 1. Join Game
