@@ -20,7 +20,7 @@ end)
 
 local vu = game:GetService("VirtualUser")game:GetService("Players").LocalPlayer.Idled:connect(function() vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame) wait(1) vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)end) 
 ```
---2000 Robux contest
+--2000 Robux contest (v1)
 ```lua
 local stops = game.Workspace.TaxiWorkspace
 local lpr = game.Players.LocalPlayer.Character
@@ -50,7 +50,27 @@ end)
 
 local vu = game:GetService("VirtualUser")game:GetService("Players").LocalPlayer.Idled:connect(function() vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame) wait(1) vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)end) 
 ```
+--2000 Robux contest (v2)
+```lua
+local stops = game.Workspace.TaxiWorkspace
+local lpr = game.Players.LocalPlayer.Character
+local take_route = game:GetService("ReplicatedStorage").Taxi.Taxi
+task.spawn(function()
+    while task.wait(0.5) do
+        for _,v in pairs(stops:GetChildren()) do
+            for i = 1, 5 do
+                take_route:FireServer("Start", i)
+            end
+            v.Stop.CFrame = lpr.HumanoidRootPart.CFrame
+            wait(0.1)
+            v.Stop.CFrame = lpr.HumanoidRootPart.CFrame + Vector3.new(0,100,10)
+        end
+    end
+end)
 
+
+local vu = game:GetService("VirtualUser")game:GetService("Players").LocalPlayer.Idled:connect(function() vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame) wait(1) vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)end) 
+```
 How To Use:
 1. Join Game
 2. Execute script
