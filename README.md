@@ -4,6 +4,7 @@ https://discord.gg/wERDPQUt5H - ру сервак
 
 НОВАЯ ВЕРСИЯ (NEW VERSION)
 ```lua
+--@credits to: bruhguy7082/qmwdev
 local Delivery_upvr = game:GetService("ReplicatedStorage").Delivery
 local Delivery_space = game.Workspace.DeliveryWorkspace
 local Local_Player = game.Players.LocalPlayer
