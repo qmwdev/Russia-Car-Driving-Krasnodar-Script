@@ -14,7 +14,7 @@ task.spawn(function()
 	while task.wait() do
         for _,v in pairs(Delivery_space:GetChildren()) do
             v.CFrame = Local_Player.Character.HumanoidRootPart.CFrame
-            wait(0.5)
+			wait(0.05)
             v.CFrame += Vector3.new(0, 10, 10)
         end
 		Delivery_upvr:FireServer("Get")
