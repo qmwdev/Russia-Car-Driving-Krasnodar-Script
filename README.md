@@ -8,7 +8,7 @@ https://discord.gg/wERDPQUt5H - ру сервак
 local Delivery_upvr = game:GetService("ReplicatedStorage").Delivery
 local Delivery_space = game.Workspace.DeliveryWorkspace
 local Local_Player = game.Players.LocalPlayer
-Local_Player.Character.HumanoidRootPart.CFrame = CFrame.new(1348, 22, -1746)
+Local_Player.Character.HumanoidRootPart.CFrame = CFrame.new(1355, 32, -1745)
 
 task.spawn(function()
 	while task.wait() do
