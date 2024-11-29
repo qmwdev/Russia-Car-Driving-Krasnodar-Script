@@ -10,6 +10,43 @@ local Delivery_space = game.Workspace.DeliveryWorkspace
 local Local_Player = game.Players.LocalPlayer
 Local_Player.Character.HumanoidRootPart.CFrame = CFrame.new(1355, 32, -1745)
 
+--$ ебанутый обход
+--1351.47961, 22.2827911, -1751.8252
+local under_del = Instance.new('Part', game.Workspace)
+under_del.Position = Vector3.new(0, 100, 0)
+under_del.Size = Vector3.new(10, 1, 10)
+under_del.Anchored = true
+
+task.spawn(function()
+    while task.wait() do
+        Delivery_upvr:FireServer("Get")
+        for _,v in pairs(Delivery_space:GetChildren()) do
+            if v.Transparency == 0 then
+                print(v.Position)
+                Local_Player.Character.HumanoidRootPart.CFrame = CFrame.new(under_del.Position.X, under_del.Position.Y + 10, under_del.Position.Z)
+                	wait(2)
+                Local_Player.Character.HumanoidRootPart.CFrame = v.CFrame + Vector3.new(0,35,0)
+					wait(8)
+            else
+                Local_Player.Character.HumanoidRootPart.CFrame = CFrame.new(1355, 32, -1745)
+            end
+        end
+    end
+end)
+
+local vu = game:GetService("VirtualUser")game:GetService("Players").LocalPlayer.Idled:connect(function() vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame) wait(1) vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)end) 
+```
+
+
+
+Доставка (не работает)
+```lua
+--@credits to: bruhguy7082/qmwdev
+local Delivery_upvr = game:GetService("ReplicatedStorage").Delivery
+local Delivery_space = game.Workspace.DeliveryWorkspace
+local Local_Player = game.Players.LocalPlayer
+Local_Player.Character.HumanoidRootPart.CFrame = CFrame.new(1355, 32, -1745)
+
 task.spawn(function()
 	while task.wait() do
         for _,v in pairs(Delivery_space:GetChildren()) do
@@ -22,30 +59,6 @@ task.spawn(function()
 end)
 
 --not mine anti-afk
-local vu = game:GetService("VirtualUser")game:GetService("Players").LocalPlayer.Idled:connect(function() vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame) wait(1) vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)end) 
-```
-
-
-
-Доставка
-```lua
---@credits to: bruhguy7082/qmwdev
-local Delivery_upvr = game:GetService("ReplicatedStorage").Delivery
-local Delivery_space = game.Workspace.DeliveryWorkspace
-local Local_Player = game.Players.LocalPlayer
-Local_Player.Character.HumanoidRootPart.CFrame = CFrame.new(1348, 22, -1746)
-for _,v in pairs(Delivery_space:GetChildren()) do
-	v.CFrame = Local_Player.Character.HumanoidRootPart.CFrame
-end
-
-task.spawn(function()
-wait(1)
-	while task.wait(1) do
-		Local_Player.Character.HumanoidRootPart.CFrame = CFrame.new(1348, 27, -1746)
-		Delivery_upvr:FireServer("Get")
-	end
-end)
-
 local vu = game:GetService("VirtualUser")game:GetService("Players").LocalPlayer.Idled:connect(function() vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame) wait(1) vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)end) 
 ```
 Такси
