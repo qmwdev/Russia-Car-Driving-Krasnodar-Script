@@ -49,7 +49,7 @@ end)
 
 local vu = game:GetService("VirtualUser")game:GetService("Players").LocalPlayer.Idled:connect(function() vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame) wait(1) vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)end) 
 ```
---2000 Robux contest (v1)
+Такси
 ```lua
 local stops = game.Workspace.TaxiWorkspace
 local lpr = game.Players.LocalPlayer.Character
@@ -79,7 +79,7 @@ end)
 
 local vu = game:GetService("VirtualUser")game:GetService("Players").LocalPlayer.Idled:connect(function() vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame) wait(1) vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)end) 
 ```
---2000 Robux contest (v2)
+Такси
 ```lua
 local stops = game.Workspace.TaxiWorkspace
 local lpr = game.Players.LocalPlayer.Character
