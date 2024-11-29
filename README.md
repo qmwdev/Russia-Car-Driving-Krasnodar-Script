@@ -9,7 +9,17 @@ local Delivery_upvr = game:GetService("ReplicatedStorage").Delivery
 local Delivery_space = game.Workspace.DeliveryWorkspace
 local Local_Player = game.Players.LocalPlayer
 Local_Player.Character.HumanoidRootPart.CFrame = CFrame.new(1355, 32, -1745)
+local TweenService = game:GetService("TweenService")
+local part_to_tween = Local_Player.Character.HumanoidRootPart
 
+local tweenInfo = TweenInfo.new(
+	1, -- Время в секундах
+	Enum.EasingStyle.Linear,
+	Enum.EasingDirection.Out,
+	1,
+	false,
+	0
+)
 --$ ебанутый обход
 --1351.47961, 22.2827911, -1751.8252
 local under_del = Instance.new('Part', game.Workspace)
@@ -17,15 +27,18 @@ under_del.Position = Vector3.new(0, 100, 0)
 under_del.Size = Vector3.new(10, 1, 10)
 under_del.Anchored = true
 
+
+
 task.spawn(function()
     while task.wait() do
         Delivery_upvr:FireServer("Get")
         for _,v in pairs(Delivery_space:GetChildren()) do
             if v.Transparency == 0 then
                 print(v.Position)
+                local tween = TweenService:Create(part_to_tween, tweenInfo, {CFrame = v.CFrame})
                 Local_Player.Character.HumanoidRootPart.CFrame = CFrame.new(under_del.Position.X, under_del.Position.Y + 10, under_del.Position.Z)
-			wait(2)
-                Local_Player.Character.HumanoidRootPart.CFrame = v.CFrame + Vector3.new(0,35,0)
+                	wait(2)
+                tween:Play()
 			wait(8)
             else
                 Local_Player.Character.HumanoidRootPart.CFrame = CFrame.new(1355, 32, -1745)
