@@ -24,9 +24,9 @@ task.spawn(function()
             if v.Transparency == 0 then
                 print(v.Position)
                 Local_Player.Character.HumanoidRootPart.CFrame = CFrame.new(under_del.Position.X, under_del.Position.Y + 10, under_del.Position.Z)
-                	wait(2)
+			wait(2)
                 Local_Player.Character.HumanoidRootPart.CFrame = v.CFrame + Vector3.new(0,35,0)
-					wait(8)
+			wait(8)
             else
                 Local_Player.Character.HumanoidRootPart.CFrame = CFrame.new(1355, 32, -1745)
             end
