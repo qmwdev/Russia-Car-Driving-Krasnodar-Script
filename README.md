@@ -2,7 +2,7 @@
 Basic Auto Farm Script For RCDK (12640241039)
 https://discord.gg/wERDPQUt5H - ру сервак
 
-НОВАЯ ВЕРСИЯ (NEW VERSION)
+Доставка НОВАЯ ВЕРСИЯ (NEW VERSION)
 ```lua
 --@credits to: bruhguy7082/qmwdev
 local Delivery_upvr = game:GetService("ReplicatedStorage").Delivery
@@ -27,8 +27,7 @@ local vu = game:GetService("VirtualUser")game:GetService("Players").LocalPlayer.
 
 
 
-
-
+Доставка
 ```lua
 --@credits to: bruhguy7082/qmwdev
 local Delivery_upvr = game:GetService("ReplicatedStorage").Delivery
