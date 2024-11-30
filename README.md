@@ -52,7 +52,7 @@ local vu = game:GetService("VirtualUser")game:GetService("Players").LocalPlayer.
 
 
 
-Доставка (не работает)
+Доставка (РАБОТАЕТ НО НА СТАРЫХ СЕРВЕРАХ)
 ```lua
 --@credits to: bruhguy7082/qmwdev
 local Delivery_upvr = game:GetService("ReplicatedStorage").Delivery
