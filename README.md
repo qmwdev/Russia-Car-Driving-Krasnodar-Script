@@ -16,7 +16,7 @@ else
 end
 
 local settings = {
-    advertisement = true, -- поставьте false, чтобы ничего при запуске скрипта не писало в чат
+    advertisement = false, -- поставьте false, чтобы ничего при запуске скрипта не писало в чат
     multi_account = false
 }
 
