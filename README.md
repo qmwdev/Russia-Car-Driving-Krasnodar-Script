@@ -9,7 +9,7 @@ if not game:IsLoaded() then
     game.Loaded:Wait()
 end
 
-if game.PlaceVersion == "7294" then
+if game.PlaceVersion == 7294 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/qmwdev/Russia-Car-Driving-Krasnodar-Script/refs/heads/main/dostavka%20(old).lua"))()
 else
     loadstring(game:HttpGet("https://raw.githubusercontent.com/qmwdev/Russia-Car-Driving-Krasnodar-Script/refs/heads/main/dostavka%20(new).lua"))()
@@ -26,7 +26,6 @@ if settings.advertisement then
     chatrem:FireServer("le le le gitхаб точка com/qmwdev/", "All")
     chatrem:FireServer("le le le ЛУЧШИЕ СКРИПТЫ/ЕЖЕДНЕВНЫЕ РАЗДАЧИ", "All")
 end
-
 ```
 
 Такси
