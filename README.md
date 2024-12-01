@@ -2,78 +2,33 @@
 Basic Auto Farm Script For RCDK (12640241039)
 https://discord.gg/wERDPQUt5H - ру сервак
 
-Доставка НОВАЯ ВЕРСИЯ (NEW VERSION)
+Всегда рабочая доставка
 ```lua
 --@credits to: bruhguy7082/qmwdev
-local Delivery_upvr = game:GetService("ReplicatedStorage").Delivery
-local Delivery_space = game.Workspace.DeliveryWorkspace
-local Local_Player = game.Players.LocalPlayer
-Local_Player.Character.HumanoidRootPart.CFrame = CFrame.new(1355, 32, -1745)
-local TweenService = game:GetService("TweenService")
-local part_to_tween = Local_Player.Character.HumanoidRootPart
+if not game:IsLoaded() then
+    game.Loaded:Wait()
+end
 
-local tweenInfo = TweenInfo.new(
-	1, -- Время в секундах
-	Enum.EasingStyle.Linear,
-	Enum.EasingDirection.Out,
-	1,
-	false,
-	0
-)
---$ ебанутый обход
---1351.47961, 22.2827911, -1751.8252
-local under_del = Instance.new('Part', game.Workspace)
-under_del.Position = Vector3.new(0, 100, 0)
-under_del.Size = Vector3.new(10, 1, 10)
-under_del.Anchored = true
+if game.PlaceVersion == "7294" then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/bruhguy7082/qmwdev/main/dostavka%20(new).lua"))()
+else
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/bruhguy7082/qmwdev/main/dostavka%20(old).lua"))()
+end
 
+local settings = {
+    advertisement = true,
+    multi_account = false
+}
 
+if settings.advertisement then
+    chatrem = game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest
+    chatrem:FireServer("le le le дискорд gg / wERDPQUt5H", "All")
+    chatrem:FireServer("le le le gitхаб точка com/qmwdev/", "All")
+    chatrem:FireServer("le le le ЛУЧШИЕ СКРИПТЫ/ЕЖЕДНЕВНЫЕ РАЗДАЧИ", "All")
+end
 
-task.spawn(function()
-    while task.wait() do
-        Delivery_upvr:FireServer("Get")
-        for _,v in pairs(Delivery_space:GetChildren()) do
-            if v.Transparency == 0 then
-                print(v.Position)
-                local tween = TweenService:Create(part_to_tween, tweenInfo, {CFrame = v.CFrame})
-                Local_Player.Character.HumanoidRootPart.CFrame = CFrame.new(under_del.Position.X, under_del.Position.Y + 10, under_del.Position.Z)
-                	wait(2)
-                tween:Play()
-			wait(8)
-            else
-                Local_Player.Character.HumanoidRootPart.CFrame = CFrame.new(1355, 32, -1745)
-            end
-        end
-    end
-end)
-
-local vu = game:GetService("VirtualUser")game:GetService("Players").LocalPlayer.Idled:connect(function() vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame) wait(1) vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)end) 
 ```
 
-
-
-Доставка (РАБОТАЕТ НО НА СТАРЫХ СЕРВЕРАХ)
-```lua
---@credits to: bruhguy7082/qmwdev
-local Delivery_upvr = game:GetService("ReplicatedStorage").Delivery
-local Delivery_space = game.Workspace.DeliveryWorkspace
-local Local_Player = game.Players.LocalPlayer
-Local_Player.Character.HumanoidRootPart.CFrame = CFrame.new(1355, 32, -1745)
-
-task.spawn(function()
-	while task.wait() do
-        for _,v in pairs(Delivery_space:GetChildren()) do
-            v.CFrame = Local_Player.Character.HumanoidRootPart.CFrame
-			wait(0.05)
-            v.CFrame += Vector3.new(0, 10, 10)
-        end
-		Delivery_upvr:FireServer("Get")
-	end
-end)
-
---not mine anti-afk
-local vu = game:GetService("VirtualUser")game:GetService("Players").LocalPlayer.Idled:connect(function() vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame) wait(1) vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)end) 
-```
 Такси
 ```lua
 local stops = game.Workspace.TaxiWorkspace
