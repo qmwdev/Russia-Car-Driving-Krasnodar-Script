@@ -10,9 +10,9 @@ if not game:IsLoaded() then
 end
 
 if game.PlaceVersion == "7294" then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/bruhguy7082/qmwdev/main/dostavka%20(new).lua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/qmwdev/Russia-Car-Driving-Krasnodar-Script/refs/heads/main/dostavka%20(old).lua"))()
 else
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/bruhguy7082/qmwdev/main/dostavka%20(old).lua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/qmwdev/Russia-Car-Driving-Krasnodar-Script/refs/heads/main/dostavka%20(new).lua"))()
 end
 
 local settings = {
