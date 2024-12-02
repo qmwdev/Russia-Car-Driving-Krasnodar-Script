@@ -31,7 +31,7 @@ task.spawn(function()
                 print(v.Position)
                 local tween = TweenService:Create(part_to_tween, tweenInfo, {CFrame = v.CFrame + Vector3.new(0, 20, 0)})
                 Local_Player.Character.HumanoidRootPart.CFrame = CFrame.new(under_del.Position.X, under_del.Position.Y + 10, under_del.Position.Z)
-                	wait(20)
+                	wait(25)
 					tween:Play()
 					Local_Player.Character.HumanoidRootPart.Anchored = true
 					task.wait(tweenInfo.Time)
