@@ -2,7 +2,7 @@
 local Delivery_upvr = game:GetService("ReplicatedStorage").Delivery
 local Delivery_space = game.Workspace.DeliveryWorkspace
 local Local_Player = game.Players.LocalPlayer
-Local_Player.Character.HumanoidRootPart.CFrame = CFrame.new(1355, 32, -1745)
+Local_Player.Character.HumanoidRootPart.CFrame = game.Workspace.Delivery.CFrame
 local TweenService = game:GetService("TweenService")
 local part_to_tween = Local_Player.Character.HumanoidRootPart
 
@@ -39,7 +39,7 @@ task.spawn(function()
 					Local_Player.Character.HumanoidRootPart.Anchored = false
 					wait(3)
             else
-                Local_Player.Character.HumanoidRootPart.CFrame = CFrame.new(1355, 32, -1745)
+                Local_Player.Character.HumanoidRootPart.CFrame = game.Workspace.Delivery.CFrame
             end
         end
     end
